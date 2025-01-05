@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MAUIDemoTabbedPages.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:MAUIDemoTabbedPages.Pages"
+    Shell.FlyoutBehavior="Disabled"
+    Title="MAUIDemoTabbedPages">
+
+    <ShellContent Route="DefaultPage"
+                  ContentTemplate="{DataTemplate pages:DefaultPage}" />
+
+    <!-- First TabBar -->
+    <TabBar Route="Home">
+        <ShellContent
+            Title="Dashboard"
+            Icon="dashboard.png"
+            ContentTemplate="{DataTemplate pages:DashboardPage}" />
+        <ShellContent
+            Title="Reports"
+            Icon="reports.png"
+            ContentTemplate="{DataTemplate pages:ReportsPage}" />
+    </TabBar>
+
+    <!-- Second TabBar -->
+    <TabBar Route="Settings">
+        <ShellContent
+            Title="Preferences"
+            Icon="preferences.png"
+            ContentTemplate="{DataTemplate pages:PreferencesPage}" />
+        <ShellContent
+            Title="About"
+            Icon="about.png"
+            ContentTemplate="{DataTemplate pages:AboutPage}" />
+    </TabBar>
+
+</Shell>
